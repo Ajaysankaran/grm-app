@@ -1,6 +1,7 @@
 server:
   port: 9000
-
+  servlet:
+    context-path: /app-service
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -16,3 +17,10 @@ spring:
     hibernate:
       ddl-auto: update
     database: postgresql
+  rabbitmq:
+    port: 5672
+
+rabbitMq:
+  queue-name: grm-queue
+  exchange-name: grm-exchange
+  binding-key: grm-key
